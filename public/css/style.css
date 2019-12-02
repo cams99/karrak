@@ -1,0 +1,1416 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+button:focus {
+    outline: none !important;
+}
+.light { font-weight: 300 !important; }
+.regular { font-weight: 400 !important; }
+.semibold { font-weight: 600 !important; }
+.bold { font-weight: 700 !important; }
+.extrabold { font-weight: 800 !important; }
+body {
+    overflow: hidden;
+}
+
+/* Menu */
+.menu-popup {
+    display: none;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFF;
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px #666;
+}
+.menu-popup-background {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #FFFFFF70;
+}
+.menu-popup > a {
+    justify-content: center;
+    align-items: center;
+    width: calc(100%/3);
+    height: 50%;
+    margin: 0;
+    font-size: 25px;
+    color: #000;
+    transition: all .3s;
+    display: none;
+}
+.menu-popup > a:nth-child(1) {
+    border-radius: 10px 0 0 0;
+}
+.menu-popup > a:nth-child(3) {
+    border-radius: 0 10px 0 0;
+}
+.menu-popup > a:nth-child(4) {
+    border-radius: 0 0 0 10px;
+}
+.menu-popup > a:nth-child(6) {
+    border-radius: 0 0 10px 0;
+}
+.menu-popup > a:hover {
+    background: #CC6600;
+    color: #FFF;
+    text-decoration: none;
+}
+.menu-exit {
+    position: absolute;
+    background: none;
+    border: none;
+    top: 0;
+    right: 0;
+    margin: 20px 26px;
+    font-size: 20px;
+    transition: all .3s;
+}
+.menu-exit:hover {
+    color: #CC6600;
+}
+.menuin {
+    animation-name: menuin;
+    animation-duration: 1s;
+}
+@keyframes menuin {
+    from {
+        top: 6%;
+        left: 91%;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    to {
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        height: 50%;
+        opacity: 1;
+    }
+}
+.menuout {
+    animation-name: menuout;
+    animation-duration: 1s;
+}
+@keyframes menuout {
+    from {
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        height: 50%;
+        opacity: 1;
+    }
+    to {
+        top: 6%;
+        left: 91%;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+}
+/* Fin Menu */
+
+/* Index */
+#carousel {
+    position: absolute;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.carousel-indicators li {
+    border-radius: 100%;
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 10px !important;
+}
+.img-carousel {
+    width: 100vw;
+    height: 100vh;
+}
+.navbar {
+    display: none;
+    background: #00000050;
+    color: #FFF;
+    width: 100%;
+    min-height: 130px;
+}
+.collapse {
+    justify-content: flex-end;
+}
+img.logo {
+    padding: 20px 0;
+    width: 75%;
+}
+nav {
+    margin: 0 !important;
+    position: absolute !important;
+    z-index: 1;
+}
+.nav-link{
+    color: #FFF;
+    transition: all .3s;
+    font-size: 20px;
+}
+.nav-link:hover {
+    color: black;
+}
+.carousel-item {
+    width: 100vw;
+    height: 100vh;
+}
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+.main {
+    text-align: center;
+    margin: 0;
+}
+.main > * {
+    display: flex;
+}
+.caja-titulo {
+    height: 75vh;
+}
+.caja-titulo h1 {
+    font-size: 75px;
+    margin: auto;
+    color: #FFF;
+}
+.caja-titulo2 h2 {
+    margin: auto;
+    color: #FFF;
+    font-size: 35px;
+}
+.text {
+    font-size: 40px;
+    display: block;
+}
+.caja-titulo2 {
+    height: 25vh;
+}
+.w-100 {
+    height: 0;
+}
+.redes {
+    background: #CC6600;
+    position: absolute;
+    z-index: 1000;
+    top: 45%;
+    right: 0;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px 0px 0px 5px;
+    display: none;
+}
+.red-social {
+    color: #FFF;
+    display: block;
+    transition: all .3s;
+}
+.red-social:hover {
+    color: #FFF;
+    text-shadow: 0 2px 4px #000;
+}
+.margin50 {
+    margin-top: 50px;
+}
+span.text {
+    text-shadow: 0 2px 4px #666;
+}
+.carousel-item {
+    transition: all 2s ease-in-out !important;
+}
+.nav-img {
+    width: 60%;
+}
+.centrar {
+    margin: auto;
+}
+.nav-item {
+    margin: 0 10px;
+}
+/* Fin Index */
+
+/* Page 2 */
+.top nav {
+    position: relative !important;
+}
+.top {
+    background: url('../images/Casa-\ features.jpg') no-repeat;
+    background-size: cover;
+    background-position-x: center;
+}
+.top-main {
+    text-align: center;
+    color: #FFF;
+    padding: 170px 0 5px;
+}
+.division {
+    border: 2px solid #CC6600;    
+    width: 20%;
+    margin: 0 auto 40px auto;
+}
+.page2 {
+    text-align: center;
+    margin: 70px 0 20px;
+}
+.page2 h1 {
+    padding-bottom: 40px;
+    color: #CC6600;
+    font-size: 67px;
+    letter-spacing: -2px;
+}
+.features {
+    display: flex;
+    padding: 0 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.features-item {
+    width: 20%;
+    display: inline-block;
+    padding: 0 5px;
+}
+.features-item img {
+    margin-bottom: 40px;
+}
+.features-item h3 {
+    height: 80px;
+    font-size: 25px;
+    color: #CC6600;
+}
+.texto {
+    color: #808080;
+}
+.description {
+    margin-top: 10px;
+    text-shadow: 0 2px 4px #666;
+}
+.description p {
+    font-size: 30px;
+}
+.titulo-features {
+    font-size: 60px;
+    letter-spacing: -2px;
+}
+.page2 .redes {
+    top: 45%;
+} 
+footer {
+    height: 20vh;
+    padding: 30px 0 50px;
+    text-align: center;
+    background: #3f3f3f;
+}
+footer p {
+    padding-bottom: 15px;
+    color: #FFF;
+}
+footer a {
+    color: #FFF !important;
+    background: #CC6600 !important;
+    width: 160px !important;
+    border-radius: 25px !important;   
+}
+.btn:focus {
+    outline: 0;
+    box-shadow: none !important;
+}
+footer a:hover {
+    background: #AC5600 !important;
+}
+/* Fin Page 2 */
+
+/* Page 2-3 */
+.page2-3 {
+    height: 80vh;
+    text-shadow: 0 2px 4px #666;
+}
+.page2-3 .redes {
+    text-shadow: none;
+    top: 45%;
+}
+.texto-features {
+    position: absolute;
+    right: 5%;
+    z-index: 1;
+    top: 25%;
+    text-align: end;
+    color: white;
+    padding-right: 15px;
+}
+.div-features {
+    align-items: flex-end;
+    display: flex;
+    position: relative;
+    color: #FFF;
+    font-size: 20px;
+    transition: all .5s;
+}
+.cost {
+    background: url('../images/201904-\ KARRAK-\ Exportacion\ de\ imagenes.jpg') no-repeat;
+    background-size: cover;
+    justify-content: center;
+}
+.cost p {
+    padding: 0 0 163px 20px;
+    text-shadow: none;
+}
+.design {
+    background: url(../images/CasaPiscina.jpg) no-repeat;
+    background-size: cover;
+    border: 1px solid #FFF;
+    border-top: none;
+    border-bottom: none;
+    justify-content: flex-end;
+    align-items: start;
+    flex-direction: column;
+}
+.design-div {
+    padding: 0 0 22px 50px;
+}
+.design-div p {
+    padding-bottom: 20px;
+}
+.design-div a {
+    display: block;
+    background: transparent;
+    border: 5px solid #3598fe;
+    border-radius: 25px;
+    padding: 3px 15px;
+    color: #FFF;
+    margin-bottom: 15px;
+    transition: all .5s;
+}
+.design-div a:hover {
+    background: #3598fe;
+}
+
+.questions {
+    background: url('../images/201904-\ KARRAK\ -\ Karrak\ web\ page.jpg') no-repeat;
+    background-size: cover;
+}
+.questions p {
+    padding: 0 0 118px 30px;
+}
+.questions p span {
+    display: block;
+    padding-top: 30px;
+    font-size: 15px;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: #6F3E0C;
+    opacity: .5;
+    position: absolute;
+    transition: all .5s;
+}
+.overlay:hover {
+    opacity: 0;
+}
+.div-features:hover {
+    color: #CC6600;
+}
+.div-features a, .div-features button, .design-div {
+    z-index: 1;
+}
+/* Fin Page 2-3 */
+
+/* Page 3-1 */
+.page3-1 {
+    background: url('../images/201905-KARRAK-ASSEt-Fondo-3\,1.jpg') no-repeat;
+    background-size: 100vw 100vh;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.opacity {
+    width: 100%;
+    height: 100%;
+    background-color: #3d3c3c;
+    opacity: .35;
+}
+.page3-1 .titulos {
+    position: absolute;
+    color: #FFF;
+    text-align: center;
+    margin-top: 85px;
+}
+.titulos h1 {
+    margin-bottom: 100px;
+    font-size: 65px;
+    letter-spacing: -1px;
+}
+.titulos h2 {
+    font-size: 45px;
+    margin-bottom: 70px;
+}
+.titulos h1 span {
+    display: block;
+    margin-bottom: -15px;
+}
+/* Fin Page 3-1 */
+
+/* Page 3-2 */
+.greener {
+    width: 100%;
+    text-align: end;
+    padding-right: 120px;
+    padding: 190px 120px 0 0;
+    height: 40vh;
+    min-height: 360px;
+}
+.greener h1 {
+    font-size: 48px;
+    letter-spacing: -0.2px;
+    margin-bottom: 50px;
+    color: #323945;
+}
+.greener p {
+    font-size: 22px;
+    letter-spacing: -0.21px;
+    margin-bottom: 50px;
+    color: #323945;
+}
+.greener-center {
+    height: 35vh;
+    color: #FFF;
+}
+.solar {
+    background: linear-gradient(#FFFFFF50, #FFFFFF50), url('../images/201905-KARRAK-Asets-S3-p3\,2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    align-items: center;
+    display: none;
+}
+.water {
+    background: linear-gradient(#FFFFFF20, #FFFFFF20), url('../images/201905-KARRAK-Asets-S3-p3\,2-1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    align-items: center;
+    display: none;
+}
+.solar h2 {
+    padding: 0 0 80px 50px;
+    font-size: 36px;
+    text-shadow: 0 2px 4px #666;
+}
+.water h3 {
+    padding: 0 0 80px 50px;
+    letter-spacing: -0.5px;
+    font-size: 36px;
+    text-align: end;
+    text-shadow: 0 2px 4px #666;
+}
+a.climate {
+    display: block;
+    background: transparent;
+    color: #323945;
+    font-size: 20px;
+    letter-spacing: -0.2px;
+    border: 3.5px solid #3598fe;
+    border-radius: 10px;
+    padding: 5px 40px;
+    margin-bottom: 15px;
+    transition: all .5s;
+    margin-top: 10px;
+}
+a.climate:hover {
+    background: #3598fe;
+}
+.footer {
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer h4 {
+    font-size: 22px;
+    font-style: italic;
+    letter-spacing: -0.2px;
+    padding-right: 20px;
+    color: #323945;
+}
+/* Fin Page 3-2 */
+
+/* Page 3-3 */
+.designed {
+    width: 100%;
+    text-align: end;
+    padding-right: 120px;
+    padding: 210px 120px 0 0;
+    height: 40vh;
+    min-height: 360px;
+}
+.designed h1 {
+    font-size: 36px;
+    letter-spacing: -0.2px;
+    margin-bottom: 50px;
+    color: #323945;
+}
+.designed-center {
+    height: 35vh;
+}
+div#center {
+    width: 100%;
+    height: 100%;
+}
+div#center > div {
+    display: inline-block;
+    width: calc(100% / 7);
+    margin: 0px -4.3px 0 0;
+    position: relative;
+    transition: all .5s;
+}
+.slider-prev, .slider-next {
+    position: absolute;
+    top: 40%;
+    color: #FFF;
+    font-size: 50px;
+}
+.slider-prev:hover, .slider-next:hover {
+    color: #FFF;
+}
+.slider-prev {
+    left: 10%;
+}
+.slider-next {
+    right: 10%;
+}
+.image {
+    width: calc((100%/7)*2) !important;
+    position: relative;
+}
+#img-1 {
+    background: linear-gradient(#CC660020, #CC660020), url('../images/201905-KARRAK-Asets-S3-p3\,3.jpg') no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.image1 {
+    background: linear-gradient(#00000030, #00000030), linear-gradient(#CC660035, #CC660035), url('../images/201905-KARRAK-Asets-S3-p3\,3.jpg') no-repeat !important;
+    background-size: 100% 100% !important;
+}
+#img-2 {
+    background: linear-gradient(#CC660020, #CC660020), linear-gradient(#66666647, #66666647), url('../images/201905-KARRAK-Asets-S3-p3\,3-1.jpg') no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.image2 {
+    background: linear-gradient(#00000030, #00000030), linear-gradient(#CC660035, #CC660035), url('../images/201905-KARRAK-Asets-S3-p3\,3-1.jpg') no-repeat !important;
+    background-size: 100% 100% !important;
+}
+#img-3 {
+    background: linear-gradient(#CC660020, #CC660020), linear-gradient(#66666647, #66666647), url('../images/201905-KARRAK-Asets-S3-p3\,3-3.jpg') no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.image3 {
+    background: linear-gradient(#00000030, #00000030), linear-gradient(#ff660020, #ff660020), url('../images/201905-KARRAK-Asets-S3-p3\,3-3.jpg') no-repeat !important;
+    background-size: 100% 100% !important;
+}
+#img-4 {
+    background: linear-gradient(#CC660020, #CC660020), linear-gradient(#D8D8D847, #D8D8D847), url('../images/201905-KARRAK-Asets-S3-p3\,3-4.jpg') no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.image4 {
+    background: linear-gradient(#00000030, #00000030), linear-gradient(#CC660035, #CC660035), url('../images/201905-KARRAK-Asets-S3-p3\,3-4.jpg') no-repeat !important;
+    background-size: 100% 100% !important;
+}
+#img-5 {
+    background: linear-gradient(#CC660020, #CC660020), linear-gradient(#66666647, #66666647), url('../images/201905-KARRAK-Asets-S3-p3\,3-5.jpg') no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.image5 {
+    background: linear-gradient(#00000030, #00000030), linear-gradient(#CC660035, #CC660035), url('../images/201905-KARRAK-Asets-S3-p3\,3-5.jpg') no-repeat !important;
+    background-size: 100% 100% !important;
+}
+#img-6 {
+    background: linear-gradient(#CC660020, #CC660020), linear-gradient(#F3F3F347, #F3F3F347), url('../images/201905-KARRAK-Asets-S3-p3\,3-6.jpg') no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+}
+.image6 {
+    background: linear-gradient(#00000030, #00000030), linear-gradient(#CC660035, #CC660035), url('../images/201905-KARRAK-Asets-S3-p3\,3-6.jpg') no-repeat !important;
+    background-size: 100% 100% !important;
+}
+#img-6 .slider-next {
+    right: 15%;
+}
+/* Fin Page 3-3 */
+
+/* Page 3-4 */
+.build {
+    width: 100%;
+    text-align: end;
+    padding-right: 120px;
+    padding: 180px 120px 0 0;
+    height: 30vh;
+}
+.build h1 {
+    font-size: 44px;
+    letter-spacing: -0.2px;
+    color: #323945;
+}
+.build-center {
+    height: 70vh;
+}
+.build-center .house {
+    background: linear-gradient(#FFFFFF30, #FFFFFF30), url('../images/201905-KARRAK-Asets-S3-p3\,4.jpg') no-repeat;
+    background-size: 100% 100%;
+    max-width: 45%;
+}
+.build-right {
+    margin-left: 5%;
+}
+.build-text p {
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: -.5px;
+    text-align: end;
+    padding: 20px 120px 0 0;
+}
+.build-image {
+    background: url('../images/201905-KARRAK-Asets-S3-p3\,4-1.jpg') no-repeat;
+    background-size: 100% 100%;
+    height: 70%;
+    display: none;
+}
+.build-image-text {
+    padding: 7% 19% 0 7%;
+    color: #FFF;
+    text-shadow: 0 2px 4px #666;
+}
+.build-image-text h2 {
+    font-size: 35px;
+    padding-bottom: 7%;
+}
+.build-image-text p {
+    font-size: 25px;
+}
+.build-image-text div {
+    text-align: end;
+}
+.build-image-text button, .build-image-text a  {
+    display: block;
+    background: transparent;
+    color: #FFF;
+    font-size: 20px;
+    letter-spacing: -0.2px;
+    border: 3.5px solid #3598fe;
+    border-radius: 10px;
+    transition: all .5s;
+    margin-left: auto;
+    width: 50%;
+    height: 65px;
+    margin-top: 5%;
+}
+.build-image-text a {
+    color: #FFF !important;
+    height: unset;
+    text-align: center;
+}
+.build-image-text button:hover, .build-image-text a:hover {
+    background: #3598fe;
+    text-decoration: none;
+}
+/* Fin Page 3-4 */
+
+/* Page 3-5 */
+.page3-5 .build {
+    height: 28vh;
+}
+.energy {
+    background: linear-gradient(#2B150070, #2B150070) ,url('../images/201905-KARRAK-Asets-S3-p3\,5.jpg') no-repeat;
+    background-size: 100% 100%;   
+    height: 18vh;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 2px 4px #666;
+    display: none;
+}
+.energy p {
+    font-size: 22px;
+    font-style: italic;
+    letter-spacing: -.2px;
+    color: #FFF;
+    text-align: center;
+}
+.carbon {
+    height: 14vh;
+    align-items: center;
+    justify-content: flex-end;
+    display: none;
+}
+.carbon h2 {
+    font-size: 38px;
+    color: #323945;
+    margin-right: 190px;
+}
+.images .row {
+    height: 40vh;
+    text-shadow: 0 2px 4px #666;
+}
+.white-house {
+    background: linear-gradient(#92929240, #92929240), url('../images/201905-KARRAK-Asets-S3-p3\,5-1.jpg') no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.stone-house {
+    background: linear-gradient(#92929249, #92929249), url('../images/201905-KARRAK-Asets-S3-p3\,5-2.jpg') no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.images h2 {
+    font-size: 38px;
+    text-align: center;
+    color: #FFF;
+}
+/* Fin Page 3-5 */
+
+/* Page 4-4 */
+.page4-4 .col-12 {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 17vh;
+    height: 15vh;
+}
+.page4-4 h2 {
+    color: #FFF;
+    font-size: 50px;
+    text-align: end;
+    margin-right: 7%;
+    letter-spacing: .5px;
+}
+.page4-4 h2 span {
+    display: block;
+    margin-bottom: 10px;
+}
+.page4-4 button, .button-page4-4 a {
+    display: block;
+    background: #FFFFFF30;
+    color: #FFF;
+    font-size: 20px;
+    letter-spacing: -0.2px;
+    border: 3.5px solid #3598fe;
+    border-radius: 10px;
+    transition: all .5s;
+    margin-left: auto;
+    font-size: 33px;
+    padding: 5px 25px;
+    margin-bottom: 30px;
+    width: fit-content;
+}
+.page4-4 button:hover {
+    background: #3598fe;
+}
+.button-page4-4 {
+    width: 89%;
+    margin-top: 11vh;
+}
+.button-page4-4 div {
+    width: 100%;
+}
+.blur {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: url('../images/201907-KARRAK-FONDO4\,4.jpg') no-repeat;
+    background-size: 100% 105%;
+    background-position-y: bottom;
+    filter: blur(2px) brightness(0.95);
+}
+/* Fin Page 4-4 */
+
+/* Page 6-1 */
+.page6-1 {
+    background: url("../images/20907-KARRAK-FONDO-6.1.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100vh;
+    padding: 250px 0 0 8%;
+    color: #FFF;
+}
+.col-45 {
+    display: none;
+    width: 49%;
+    margin-left: 1%;
+    position: relative;
+}
+.col-49 {
+    width: 50%;
+    display: none;
+}
+.col-49 div {
+    width: 64%;
+}
+.col-49 h2 {
+    font-size: 46px;
+    margin-bottom: 10%;
+}
+.col-49 p {
+    font-size: 20px;
+    text-align: justify;
+}
+.page6-1 button {
+    display: block;
+    background: transparent;
+    color: #FFF;
+    font-size: 20px;
+    letter-spacing: -0.2px;
+    border: 3.5px solid #3598fe;
+    border-radius: 10px;
+    transition: all .5s;
+    margin: 0 15% 0 auto;
+    padding: 15px 30px;
+    font-size: 22px;
+}
+.page6-1 button:hover {
+    background: #3598fe;
+}
+.col-45 div {
+    background: url("../images/20907-KARRAK-Video-6,1.jpg") no-repeat;
+    background-size: 100% 100%;
+    height: 80%;
+    margin-bottom: 60px;
+}
+.col-45 h2 {
+    font-size: 40px;
+}
+/* Fin Page 6-1 */
+
+/* Page 6-4 */
+.page6-4 .build-right {
+    display: none;
+}
+/* Fin Page-6-4 */
+
+/* Page 9-1 */
+.page9-1 {
+    background: url("../images/20907-KARRAK-Fondo-9\,1.jpg") no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+}
+.page9-1 > .col-6 {
+    margin-top: 130px;
+}
+.map {
+    justify-content: center;
+    align-content: center;
+    display: none;
+    flex-wrap: wrap;
+    padding-right: 8% !important;
+}
+.map > * {
+    width: 65%;
+    text-align: center;
+}
+.gmap_canvas {
+    height: 30%;
+}
+.gmap_canvas iframe {
+    width: 100%;
+    height: 100%;
+}
+.info-map {
+    text-align: start;
+    margin-top: 25px;
+    color: #FFF;
+}
+.info-map h3 {
+    color: #CC6600;
+    margin-bottom: 15px;
+}
+.info-map p i {
+    color: #000;
+    font-size: 22px;
+}
+.info-map p {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+.info-map p:nth-child(2) i {
+    color: #EA4335;
+    margin: 0 3px 0 3px;
+}
+.info-map p:nth-child(5) i {
+    margin-right: 3px;
+}
+.form {
+    justify-content: center;
+    align-content: center;
+    display: none;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-right: 6% !important;
+    margin-top: 5% !important;
+}
+.form > * {
+    width: 100%
+} 
+.form h2 {
+    font-size: 44px;
+    color: #FFF;
+    text-align: end;
+    margin: 0 17.5% 8% 0;
+}
+form > * {
+    width: 65%;
+    margin-bottom: 5% !important;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 13px;
+    font-size: 15px !important;
+}   
+form input[type="submit"] {
+    width: unset;
+    display: block;
+    text-align: center;
+    margin: -10px 17.5% 0 auto;
+    background: #CC6600;
+    color: #FFF;
+}
+form {
+    margin-bottom: 15%;
+}
+.form > p {
+    color: #FFF;
+    font-size: 16px;
+}
+.info-map p img {
+    height: 22px;
+    margin-bottom: 4px;
+}
+/* Fin Page 9-1 */
+
+/* Page 9-2 */
+.principal {
+    display: none;
+    margin-top: 23vh;
+    height: 28vh;
+}
+.principal img {
+    width: 100%;
+    height: 100%;
+}
+.play-button {
+    position: absolute;
+    top: 27%;
+    width: 8.5% !important;
+    height: unset !important;
+    left: 47%;
+}
+.medium-text {
+    display: none;
+    height: 30vh;
+    padding: 40px 15% 40px 40px;
+}
+.medium-text p:nth-child(2) {
+    margin-bottom: 25px;
+}
+.footer-img {
+    background: url('../images/20907-KARRAK-Bannerfinal.jpg') no-repeat;
+    background-size: 100% 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 19vh;
+    width: 100%;
+}
+.footer-img h2 {
+    color: #FFF;
+    font-size: 48px;
+}
+/* Fin Page 9-2 */
+
+/* Page 9-3 */
+.our-team {
+    width: 100%;
+    height: 15vh;
+    margin-top: 22vh;
+    text-align: end;
+    padding-right: 7%;
+    color: #323945;
+    display: none;
+}
+.our-team h2 {
+    font-size: 48px;
+}
+.our-team h3 {
+    font-size: 36px;
+}
+.our-team-menu {
+    width: 100%;
+    height: 15vh;
+    text-align: end;
+    padding: 3% 7% 0 0;
+    display: none;
+}
+.our-team-menu > a {
+    display: inline-block;
+    padding: 0 15px;
+    font-size: 26px;
+    transition: all .3s;
+    color: #666;
+}
+.our-team-menu > a:hover {
+    color: #CC6600;
+    text-decoration: none;
+}
+.our-team-images {
+    height: 48vh;
+    width: 100%;
+    display: none;
+}
+.our-team-images > div {
+    display: inline-block;
+    height: 100%;
+    position: relative;
+}
+.our-team-images > div > img {
+    height: 100%;
+    width: 103%;
+}
+.our-team-images > div:nth-child(1) {
+    width: 39%;
+}
+.our-team-images > div:nth-child(2) {
+    width: 30%;
+}
+.our-team-images > div:nth-child(3) {
+    width: 20%;
+}
+.our-team-images > div:nth-child(4) {
+    width: 10%;
+}
+.our-team-images > div:nth-child(1) img {
+    filter: brightness(0.65);
+}
+.our-team-images .text {
+    position: absolute;
+    top: 33%;
+    right: 5%;
+    color: #FFF;
+    text-align: end;
+}
+.our-team-images .text h3 {
+    font-size: 44px;
+    margin-bottom: -5px;
+}
+.our-team-images .text p {
+    font-size: 24px;
+}
+/* Fin Page 9-3 */
+
+/* Media Queries */
+@media (min-width:1440px){   
+    .nav-link {
+        font-size: 20px;
+    }
+}
+@media (max-width:1300px){   
+    .nav-item {
+        margin: 0;
+    }
+}
+@media (max-width:1235px){   
+    .questions p {
+        padding-bottom: 93px;
+    }
+}
+@media (max-width:1097px){   
+    .questions p {
+        padding-bottom: 73px;
+    }
+    .nav-link{
+        font-size: 16px;
+    }
+    .nav-img {
+        width: 110% !important;
+    }
+}
+@media (max-width:1050px){
+    .caja-titulo h1 {
+        font-size: 65px;
+    }
+}
+@media (max-width:991px){   
+    .menu {
+        display: none;
+    }
+}  
+@media (min-width:960px){   
+    .features-item h3 {
+        font-size: 25px;
+    }
+}
+@media (max-width:960px) {
+    .features-item {
+        width: 33%;
+        margin-bottom: 20px;
+    }
+    .titulo-features {
+        font-size: 45px;
+    }
+    .description p {
+        font-size: 25px;
+    }
+    .nav-img {
+        width: 130% !important;
+    }
+}
+@media (max-width:885px){   
+    .questions p {
+        padding-bottom: 43px;
+    }
+    .texto-features {
+        font-size: 29px;
+    }
+}
+@media (max-width:805px){   
+    .design-div {
+        padding-bottom: 0;
+    }
+    .nav-item {
+        margin: 0 7px;
+    }
+}
+@media (max-width:800px){ 
+    .text2 {
+        font-size: 30px;
+    }
+    .nav-img {
+        width: 150% !important;
+    }
+}
+@media (max-width:767px){    
+    .description p {
+        font-size: 19px;
+    }
+    .titulo-features {
+        font-size: 38px;
+    }
+    .page2 h1 {
+        font-size: 50px;
+    }
+    .texto-features {
+        top: 47%;
+        font-size: 16px;
+    }
+    .page2-3 .redes {
+        top: 43%;
+        font-size: 20px;
+    }
+    .cost {
+        justify-content: flex-end;
+        background-position-y: center;
+    }
+    .cost p {
+        padding: 0 45px 16px 45px;
+    }
+    .design {
+        justify-content: center;
+        align-items: start;
+        border: none;
+    }
+    .questions {
+        justify-content: flex-end;
+        align-items: center;
+        background-position-y: center;
+    }
+    .questions p {
+        padding: 0 45px 0 45px;
+        text-align: end;
+    } 
+    .div-features {
+        height: 33.33vh;
+    }
+    .design-div {
+        padding: 30px 45px 0px 45px;
+    }
+}
+@media (max-width:710px){   
+    .texto-features {
+        display: none;
+    }
+    .nav-img {
+        width: 200% !important;
+    }    
+}
+@media (max-width:640px){   
+}
+@media (max-width:600px){
+    .features-item {
+        width: 50%;
+    }
+    .titulo-features {
+        font-size: 30px;
+    }
+    .description p {
+        font-size: 15px;
+    }
+    .nav-img {
+        width: 300% !important;
+    }
+}
+@media (max-width:475px){   
+    .titulo-features {
+        font-size: 26px;
+    }
+    .page2 h1 {
+        font-size: 45px;
+    }
+    .nav-img {
+        width: 350% !important;
+    }
+}
+@media (max-width:425px){   
+    .caja-titulo h1 {
+        font-size: 36px;
+    }
+    .redes {
+        font-size: 20px;
+    }
+    .text {
+        font-size: 26px;
+    }
+    .text1 {
+        font-size: 19px;
+    }
+    .text2 {
+        font-size: 26px;
+    }
+    .titulo-features {
+        font-size: 23px;
+    }
+    .description p {
+        font-size: 12px;
+    }
+    .features-item {
+        width: 100%;
+    }
+    footer {
+        height: auto;
+    }
+    .page2 h1 {
+        font-size: 32px;
+    }
+    .cost p {
+        padding: 0 45px;
+    }
+    .design-div {
+        padding-top: 10px;
+    }
+    .design-div p {
+        padding-bottom: 5px;
+    }
+    .div-features {
+        font-size: 17px;
+    }
+    .nav-img {
+        width: 400% !important;
+    }
+}
+@media (max-width:375px){   
+    .caja-titulo h1 {
+        font-size: 33px;
+    }
+    .text2 {
+        font-size: 20px;
+    }
+    footer p {
+        font-size: 13px;
+    }
+    .nav-img {
+        width: 450% !important; 
+    }
+}
+@media (max-width:325px){   
+    .text1 {
+        font-size: 16px;
+    }
+    .slide3 {
+        margin-top: 10px;
+    }
+    .page2 .redes {
+        top: 53%;
+    }
+    .div-features {
+        font-size: 13px;
+    }
+    .page2-3 .redes {
+        top: 38%;
+    }
+    .nav-img {
+        width: 700% !important;
+    }
+}
+
+/* Animaciones */
+.fade-in {
+    animation-duration: .8s;
+    animation-name: fadein;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.slidein-redes {
+    animation-name: slidein-redes;
+    animation-duration: .5s;
+}   
+@keyframes slidein-redes {
+    from {
+        right: -4%;
+    }
+    to { 
+        right: 0%;
+    }
+}
+.display {
+    display: block !important;
+}
+.display-flex {
+    display: flex !important;
+}
+.display-inline {
+    display: inline-block !important;
+}
